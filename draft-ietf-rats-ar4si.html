@@ -2272,11 +2272,11 @@ Jump to step (6.1).<a href="#section-3.2-12.5.2.6" class="pilcrow">¶</a>
             </ol>
 </li>
           <li id="section-3.2-12.6">
-            <p id="section-3.2-12.6.1">The Relying Party takes action based on Verifier B's appraised Trustworthiness Vector:<a href="#section-3.2-12.6.1" class="pilcrow">¶</a></p>
+            <p id="section-3.2-12.6.1">The Relying Party takes action based on Verifier B's appraised Trustworthiness Vector, and applies the Appraisal Policy for Attestation Results.  Following is a reasonable process for such evaluation:<a href="#section-3.2-12.6.1" class="pilcrow">¶</a></p>
 <ol start="1" type="1" class="normal type-1" id="section-3.2-12.6.2">
-<li id="section-3.2-12.6.2.1">Prune any Trustworthiness Claims not used in the Appraisal Policy for Attestation Results.<a href="#section-3.2-12.6.2.1" class="pilcrow">¶</a>
+<li id="section-3.2-12.6.2.1">Prune any Trustworthiness Claims from the Trustworthiness Vector not used in the Appraisal Policy for Attestation Results.<a href="#section-3.2-12.6.2.1" class="pilcrow">¶</a>
 </li>
-              <li id="section-3.2-12.6.2.2">Allow the information exchange from the Attester into a Relying Party context where the Verifier B appraised Trustworthiness Vector includes all the mandatory Trustworthiness Claims of value "1", and none of the disqualifying Trustworthiness Claims containing values that are not "0" or "1".<a href="#section-3.2-12.6.2.2" class="pilcrow">¶</a>
+              <li id="section-3.2-12.6.2.2">Allow the information exchange from the Attester into a Relying Party context in the Appraisal Policy for Attestation Results where the Verifier B appraised Trustworthiness Vector includes all the mandatory Trustworthiness Claims are in the "Affirming" value range, and none of the disqualifying Trustworthiness Claims are in the "Contraindicated" value range.<a href="#section-3.2-12.6.2.2" class="pilcrow">¶</a>
 </li>
               <li id="section-3.2-12.6.2.3">Disallow any information exchange into a Relying Party context for which that Verifier B appraised Trustworthiness Vector is not qualified.<a href="#section-3.2-12.6.2.3" class="pilcrow">¶</a>
 </li>
