@@ -295,16 +295,16 @@ Table of Contents
 
    Additionally, each set of Attestation Results must be provably and
    non-reputably bound to the identity of the original Attesting
-   Environment which was evaluated by the Verifier.  This will be
-   accomplished via two the meeting of two requirements.  First the
-   Verifier signed Attestation Results MUST include sufficient Identity
-   Evidence to ensure that this Attesting Environment signature refers
-   to the same Attesting Environment appraised by the Verifier.  Second,
-   where the passport model is used as a subsystem, an Attesting
-   Environment signature which spans the Verifier signature MUST also be
-   included.  As the Verifier signature already spans the Attester
-   Identity as well as the Attestation Results, this restricts the
-   viability of spoofing attacks.
+   Environment which was evaluated by the Verifier.  This is
+   accomplished via satisfying two requirements.  First the Verifier
+   signed Attestation Results MUST include sufficient Identity Evidence
+   to ensure that this Attesting Environment signature refers to the
+   same Attesting Environment appraised by the Verifier.  Second, where
+   the passport model is used as a subsystem, an Attesting Environment
+   signature which spans the Verifier signature MUST also be included.
+   As the Verifier signature already spans the Attester Identity as well
+   as the Attestation Results, this restricts the viability of spoofing
+   attacks.
 
    In a subset of use cases, these two pieces of Identity Evidence may
    be sufficient for a Relying Party to successfully meet the criteria
