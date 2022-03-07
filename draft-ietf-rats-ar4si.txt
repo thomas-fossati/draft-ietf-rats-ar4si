@@ -5,14 +5,14 @@
 RATS Working Group                                               E. Voit
 Internet-Draft                                                     Cisco
 Intended status: Standards Track                             H. Birkholz
-Expires: 4 September 2022                                 Fraunhofer SIT
+Expires: 8 September 2022                                 Fraunhofer SIT
                                                              T. Hardjono
                                                                      MIT
                                                               T. Fossati
                                                              Arm Limited
                                                              V. Scarlata
                                                                    Intel
-                                                            3 March 2022
+                                                            7 March 2022
 
 
               Attestation Results for Secure Interactions
@@ -50,7 +50,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 4 September 2022.
+   This Internet-Draft will expire on 8 September 2022.
 
 Copyright Notice
 
@@ -350,9 +350,11 @@ Table of Contents
    This document recognizes three general categories of Attesters.
 
    1.  HSM-based: A Hardware Security Module (HSM) based cryptoprocessor
-       which continually hashes security measurements in a way which
-       prevents an Attester from lying about measurements which have
-       been extended into the Attesting Environment (e.g., TPM2.0.)
+       which hashes one or more streams of security measurements from an
+       Attester within the Attesting Environment.  Maintenance of this
+       hash enables detection of an Attester which is lying about the
+       set of security measurements taken.  An example of a HSM is a
+       TPM2.0 [TPM2.0].
 
    2.  Process-based: An individual process which has its runtime memory
        encrypted by an Attesting Environment in a way that no other
@@ -982,7 +984,7 @@ Table of Contents
    Attestation Results back to this original Attester no less frequently
    than a well-known interval.  This interval may also be asynchronous,
    based on the changing of certain Evidence as described in
-   [I-D.birkholz-rats-network-device-subscription].
+   [I-D.ietf-rats-network-device-subscription].
 
    When a Relying Party is to receive information about the Attester's
    trustworthiness, the Attesting Environment assembles the minimal set
@@ -1239,20 +1241,20 @@ Table of Contents
 
 7.2.  Informative References
 
-   [I-D.birkholz-rats-network-device-subscription]
+   [I-D.ietf-rats-network-device-subscription]
               Birkholz, H., Voit, E., and W. Pan, "Attestation Event
               Stream Subscription", Work in Progress, Internet-Draft,
-              draft-birkholz-rats-network-device-subscription-03, 17
-              August 2021, <https://datatracker.ietf.org/doc/html/draft-
-              birkholz-rats-network-device-subscription-03>.
+              draft-ietf-rats-network-device-subscription-01, 7 March
+              2022, <https://datatracker.ietf.org/doc/html/draft-ietf-
+              rats-network-device-subscription-01>.
 
    [I-D.tschofenig-rats-psa-token]
               Tschofenig, H., Frost, S., Brossard, M., Shaw, A., and T.
               Fossati, "Arm's Platform Security Architecture (PSA)
               Attestation Token", Work in Progress, Internet-Draft,
-              draft-tschofenig-rats-psa-token-08, 24 March 2021,
+              draft-tschofenig-rats-psa-token-09, 7 March 2022,
               <https://datatracker.ietf.org/doc/html/draft-tschofenig-
-              rats-psa-token-08>.
+              rats-psa-token-09>.
 
    [IEEE802.1AR]
               "802.1AR: Secure Device Identity", 2 August 2018,
@@ -1286,6 +1288,11 @@ Table of Contents
    [TPM-ID]   "TPM Keys for Platform Identity for TPM 1.2", August 2015,
               <https://www.trustedcomputinggroup.org/wp-content/uploads/
               TPM_Keys_for_Platform_Identity_v1_0_r3_Final.pdf>.
+
+   [TPM2.0]   "Trusted Platform Module Library - Part 1: Architecture",
+              n.d., <https://trustedcomputinggroup.org/wp-
+              content/uploads/TPM-Rev-2.0-Part-1-Architecture-
+              01.07-2014-03-13.pdf>.
 
    [US-Executive-Order]
               "Executive Order on Improving the Nation's Cybersecurity",

@@ -1023,7 +1023,7 @@ svg [stroke="fill"], svg [fill^="#fff"] {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Voit, et al.</td>
-<td class="center">Expires 4 September 2022</td>
+<td class="center">Expires 8 September 2022</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1036,12 +1036,12 @@ svg [stroke="fill"], svg [fill^="#fff"] {
 <dd class="internet-draft">draft-ietf-rats-ar4si-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2022-03-03" class="published">3 March 2022</time>
+<time datetime="2022-03-07" class="published">7 March 2022</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Standards Track</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2022-09-04">4 September 2022</time></dd>
+<dd class="expires"><time datetime="2022-09-08">8 September 2022</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1101,7 +1101,7 @@ Additionally, where the Relying Party is interfacing with a heterogeneous mix of
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 4 September 2022.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 8 September 2022.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1442,7 +1442,7 @@ Consequently, an Attester implementation needs to ensure that any Evidence which
 After the Verifier performs its appraisal, it will include sufficient information in the Attestation Results to enable a Relying Party to have confidence that the Attester's trustworthiness is represented via Trustworthiness Claims signed by the appropriate Attesting Environment.<a href="#section-2.2.1-1" class="pilcrow">¶</a></p>
 <p id="section-2.2.1-2">This document recognizes three general categories of Attesters.<a href="#section-2.2.1-2" class="pilcrow">¶</a></p>
 <ol start="1" type="1" class="normal type-1" id="section-2.2.1-3">
-<li id="section-2.2.1-3.1">HSM-based: A Hardware Security Module (HSM) based cryptoprocessor which continually hashes security measurements in a way which prevents an Attester from lying about measurements which have been extended into the Attesting Environment (e.g., TPM2.0.)<a href="#section-2.2.1-3.1" class="pilcrow">¶</a>
+<li id="section-2.2.1-3.1">HSM-based: A Hardware Security Module (HSM) based cryptoprocessor which hashes one or more streams of security measurements from an Attester within the Attesting Environment. Maintenance of this hash enables detection of an Attester which is lying about the set of security measurements taken. An example of a HSM is a TPM2.0 <span>[<a href="#TPM2.0" class="xref">TPM2.0</a>]</span>.<a href="#section-2.2.1-3.1" class="pilcrow">¶</a>
 </li>
             <li id="section-2.2.1-3.2">Process-based: An individual process which has its runtime memory encrypted by an Attesting Environment in a way that no other processes can read and decrypt that memory (e.g., <span>[<a href="#SGX" class="xref">SGX</a>]</span> or <span>[<a href="#I-D.tschofenig-rats-psa-token" class="xref">I-D.tschofenig-rats-psa-token</a>]</span>.)<a href="#section-2.2.1-3.2" class="pilcrow">¶</a>
 </li>
@@ -2147,7 +2147,7 @@ This compound credential is rooted in the hardware based Attesting Environment o
 The overall solution is known as "Below Zero Trust" as the compound credential cannot be manipulated or spoofed by an administrator of an endpoint with root access.
 This solution is not adversely impacted by the potential drawbacks with pure background-check described above.<a href="#section-3.2-1" class="pilcrow">¶</a></p>
 <p id="section-3.2-2">To kick-off the "Below Zero Trust" compound credential creation sequence, a Verifier evaluates an Attester and returns signed Attestation Results back to this original Attester no less frequently than a well-known interval.
-This interval may also be asynchronous, based on the changing of certain Evidence as described in <span>[<a href="#I-D.birkholz-rats-network-device-subscription" class="xref">I-D.birkholz-rats-network-device-subscription</a>]</span>.<a href="#section-3.2-2" class="pilcrow">¶</a></p>
+This interval may also be asynchronous, based on the changing of certain Evidence as described in <span>[<a href="#I-D.ietf-rats-network-device-subscription" class="xref">I-D.ietf-rats-network-device-subscription</a>]</span>.<a href="#section-3.2-2" class="pilcrow">¶</a></p>
 <p id="section-3.2-3">When a Relying Party is to receive information about the Attester's trustworthiness, the Attesting Environment assembles the minimal set of Evidence which can be used to confirm or refute whether the Attester remains in the state of trustworthiness represented by the AR.
 To this Evidence, the Attesting Environment appends the signature from the most recent AR as well as a Relying Party Proof-of-Freshness.
 The Attesting Environment then signs the combination.<a href="#section-3.2-3" class="pilcrow">¶</a></p>
@@ -2377,13 +2377,13 @@ While this document does not mandate specific transport protocols, messages cont
 <a href="#section-7.2" class="section-number selfRef">7.2. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
         </h3>
 <dl class="references">
-<dt id="I-D.birkholz-rats-network-device-subscription">[I-D.birkholz-rats-network-device-subscription]</dt>
+<dt id="I-D.ietf-rats-network-device-subscription">[I-D.ietf-rats-network-device-subscription]</dt>
         <dd>
-<span class="refAuthor">Birkholz, H.</span>, <span class="refAuthor">Voit, E.</span>, and <span class="refAuthor">W. Pan</span>, <span class="refTitle">"Attestation Event Stream Subscription"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-birkholz-rats-network-device-subscription-03</span>, <time datetime="2021-08-17" class="refDate">17 August 2021</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-birkholz-rats-network-device-subscription-03">https://datatracker.ietf.org/doc/html/draft-birkholz-rats-network-device-subscription-03</a>&gt;</span>. </dd>
+<span class="refAuthor">Birkholz, H.</span>, <span class="refAuthor">Voit, E.</span>, and <span class="refAuthor">W. Pan</span>, <span class="refTitle">"Attestation Event Stream Subscription"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-rats-network-device-subscription-01</span>, <time datetime="2022-03-07" class="refDate">7 March 2022</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-rats-network-device-subscription-01">https://datatracker.ietf.org/doc/html/draft-ietf-rats-network-device-subscription-01</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="I-D.tschofenig-rats-psa-token">[I-D.tschofenig-rats-psa-token]</dt>
         <dd>
-<span class="refAuthor">Tschofenig, H.</span>, <span class="refAuthor">Frost, S.</span>, <span class="refAuthor">Brossard, M.</span>, <span class="refAuthor">Shaw, A.</span>, and <span class="refAuthor">T. Fossati</span>, <span class="refTitle">"Arm's Platform Security Architecture (PSA) Attestation Token"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-tschofenig-rats-psa-token-08</span>, <time datetime="2021-03-24" class="refDate">24 March 2021</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-tschofenig-rats-psa-token-08">https://datatracker.ietf.org/doc/html/draft-tschofenig-rats-psa-token-08</a>&gt;</span>. </dd>
+<span class="refAuthor">Tschofenig, H.</span>, <span class="refAuthor">Frost, S.</span>, <span class="refAuthor">Brossard, M.</span>, <span class="refAuthor">Shaw, A.</span>, and <span class="refAuthor">T. Fossati</span>, <span class="refTitle">"Arm's Platform Security Architecture (PSA) Attestation Token"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-tschofenig-rats-psa-token-09</span>, <time datetime="2022-03-07" class="refDate">7 March 2022</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-tschofenig-rats-psa-token-09">https://datatracker.ietf.org/doc/html/draft-tschofenig-rats-psa-token-09</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="IEEE802.1AR">[IEEE802.1AR]</dt>
         <dd>
@@ -2412,6 +2412,10 @@ While this document does not mandate specific transport protocols, messages cont
 <dt id="TPM-ID">[TPM-ID]</dt>
         <dd>
 <span class="refTitle">"TPM Keys for Platform Identity for TPM 1.2"</span>, <time datetime="2015-08" class="refDate">August 2015</time>, <span>&lt;<a href="https://www.trustedcomputinggroup.org/wp-content/uploads/TPM_Keys_for_Platform_Identity_v1_0_r3_Final.pdf">https://www.trustedcomputinggroup.org/wp-content/uploads/TPM_Keys_for_Platform_Identity_v1_0_r3_Final.pdf</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="TPM2.0">[TPM2.0]</dt>
+        <dd>
+<span class="refTitle">"Trusted Platform Module Library - Part 1: Architecture"</span>, <span>n.d.</span>, <span>&lt;<a href="https://trustedcomputinggroup.org/wp-content/uploads/TPM-Rev-2.0-Part-1-Architecture-01.07-2014-03-13.pdf">https://trustedcomputinggroup.org/wp-content/uploads/TPM-Rev-2.0-Part-1-Architecture-01.07-2014-03-13.pdf</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="US-Executive-Order">[US-Executive-Order]</dt>
       <dd>
