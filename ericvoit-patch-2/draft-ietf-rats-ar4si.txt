@@ -5,14 +5,14 @@
 RATS Working Group                                               E. Voit
 Internet-Draft                                                     Cisco
 Intended status: Standards Track                             H. Birkholz
-Expires: 5 September 2022                                 Fraunhofer SIT
+Expires: 8 September 2022                                 Fraunhofer SIT
                                                              T. Hardjono
                                                                      MIT
                                                               T. Fossati
                                                              Arm Limited
                                                              V. Scarlata
                                                                    Intel
-                                                            4 March 2022
+                                                            7 March 2022
 
 
               Attestation Results for Secure Interactions
@@ -50,7 +50,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 5 September 2022.
+   This Internet-Draft will expire on 8 September 2022.
 
 Copyright Notice
 
@@ -682,7 +682,7 @@ Table of Contents
       99:  Cryptographic validation of the Evidence has failed.
 
    file-system:  A Verifier has evaluated a specific set of directories
-      within the Attester File system.  (Note: the Verifier may or may
+      within the Attester's file system.  (Note: the Verifier may or may
       not indicate what these directory and expected files are via an
       unspecified management interface.)
 
@@ -1253,9 +1253,9 @@ Table of Contents
               Tschofenig, H., Frost, S., Brossard, M., Shaw, A., and T.
               Fossati, "Arm's Platform Security Architecture (PSA)
               Attestation Token", Work in Progress, Internet-Draft,
-              draft-tschofenig-rats-psa-token-08, 24 March 2021,
+              draft-tschofenig-rats-psa-token-09, 7 March 2022,
               <https://datatracker.ietf.org/doc/html/draft-tschofenig-
-              rats-psa-token-08>.
+              rats-psa-token-09>.
 
    [IEEE802.1AR]
               "802.1AR: Secure Device Identity", 2 August 2018,
