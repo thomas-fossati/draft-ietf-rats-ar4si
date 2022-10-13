@@ -497,7 +497,7 @@ instance-identity:
    : The Attesting Environment is recognized, and the associated instance of the Attester is not known to be compromised.
 
    96:
-   : The Attesting Environment is recognized, and but its unique private key indicates a device which is not trustworthy.
+   : The Attesting Environment is recognized, but its unique private key indicates a device which is not trustworthy.
 
    97:
    : The Attesting Environment is not recognized; however the Verifier believes it should be.
