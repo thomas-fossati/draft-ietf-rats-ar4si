@@ -522,7 +522,7 @@ runtime-opaque:
    : the Attester's executing Target Environment and Attesting Environments are encrypted and within Trusted Execution Environment(s) opaque to the operating system, virtual machine manager, and peer  applications.  (Note: This value corresponds to the protections asserted by O.RUNTIME_CONFIDENTIALITY from {{GP-TEE-PP}})
    
    32:
-   : the Attester's executing Target Environment and Attesting Environments inaccessible from any other parallel application or Guest VM running on the Attester's physical device.  (Note that unlike "1" these environments are not encrypted in a way which restricts the Attester's root operator visibility. See O.TA_ISOLATION from {{GP-TEE-PP}}.)
+   : the Attester's executing Target Environment and Attesting Environments are inaccessible from any other parallel application or Guest VM running on the Attester's physical device.  (Note that unlike "1" these environments are not encrypted in a way which restricts the Attester's root operator visibility. See O.TA_ISOLATION from {{GP-TEE-PP}}.)
    
    96:
    : The Verifier has concluded that in memory objects are unacceptably visible within the physical host that supports the Attester.
