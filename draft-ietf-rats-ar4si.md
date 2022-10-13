@@ -532,7 +532,7 @@ runtime-opaque:
 
     
 sourced-data:
-: A Verifier has evaluated of the integrity of data objects from external systems used by the Attester.
+: A Verifier has evaluated the integrity of data objects from external systems used by the Attester.
 
    0:
    : No assertion
